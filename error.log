@@ -1,0 +1,261 @@
+2017/07/15 21:52:27 [error] 8110#8110: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Com
+2017/07/15 21:52:30 [error] 8110#8110: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Com
+2017/07/18 14:14:52 [error] 8110#8110: *24 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:13:24 [error] 8110#8110: *65 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:19:33 [error] 8110#8110: *79 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:23:12 [error] 8110#8110: *83 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:23:14 [error] 8110#8110: *83 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:25:53 [error] 8110#8110: *88 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:25:57 [error] 8110#8110: *88 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:26:51 [error] 8110#8110: *88 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:27:23 [error] 8110#8110: *88 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:29:59 [error] 8110#8110: *94 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:30:01 [error] 8110#8110: *94 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:30:03 [error] 8110#8110: *94 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:30:04 [error] 8110#8110: *94 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:30:05 [error] 8110#8110: *94 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:30:06 [error] 8110#8110: *94 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:30:52 [error] 8110#8110: *94 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:31:46 [error] 8110#8110: *94 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/19 00:32:20 [error] 8110#8110: *94 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(UnexpectedValueException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(UnexpectedValueException), Array)
+#4 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illu...
+PHP message: PHP Fatal error:  Uncaught UnexpectedValueException: The stream or file "/srv/http/hackerearth_technocrats/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied in /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+Stack trace:
+#0 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#1 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#2 /srv/http/hackerearth_technocrats/vendor/monolog/monolog/src/Monolog/Logger.php(616): Monolog\Logger->addRecord(400, Object(Symfony\Component\Debug\Exception\FatalErrorException), Array)
+#3 /srv/http/hackerearth_technocrats/vendor/laravel/framework/src/Illuminate/Log/Writer.php(203): Monolog\Logger->error(Object(Symfony\Co
+2017/07/21 20:50:08 [error] 8110#8110: *1506 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot use App\UserPreference as UserPreference because the name is already in use in /srv/http/hackerearth_technocrats/app/Http/Controllers/ProfileController.php on line 9" while reading response header from upstream, client: 127.0.0.1, server: hackerearth.dev, request: "GET /user/1 HTTP/1.1", upstream: "fastcgi://unix:/run/php-fpm/php-fpm.sock:", host: "hackerearth.dev", referrer: "http://hackerearth.dev/question/1"

@@ -5,12 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Technocrats</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <style>
             html, body {
                 background-color: #fff;
@@ -71,7 +72,7 @@
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/auth') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
                     @endif
                 </div>
@@ -79,15 +80,29 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Technocrats
                 </div>
 
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <form class="form" method="GET" action="{{ route('search') }}">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="q" placeholder="Search for a question...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Go!</button>
+                                </span>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+                <br>
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a><b>Ask</b></a>
+                    <a><b>Search</b></a>
+                    <a><b>Learn</b></a>
+                    
                 </div>
             </div>
         </div>
