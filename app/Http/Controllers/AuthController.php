@@ -50,7 +50,7 @@ class AuthController extends Controller
                     }
                 }
                 if($flag==1){
-                    $dat = Question::where('category_id',$categories->id)->join('categories','categories.id','=','questions.category_id')->get(['questions.id as quest_id','categories.name as name','categories.id as id','questions.title as title'])->first();
+                    $dat = Question::where('category_id',$categories->id)->join('categories','categories.id','=','questions.category_id')->get(['questions.id as quest_id','categories.name as name','categories.id as id','questions.title as title','questions.answer_id as answer_id'])->first();
                     array_push($pref,1);
                     if($dat){
                         array_push($feed,$dat);    

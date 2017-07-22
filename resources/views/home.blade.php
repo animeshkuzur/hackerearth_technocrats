@@ -57,7 +57,7 @@
                                         <li>
                                             <h4>
                                                 <a href="{{ url('/question/'.$feed->quest_id) }}">{{ $feed->title }} 
-                                                @if($feed->answer_id == '') 
+                                                @if(empty($feed->answer_id)) 
                                                     (Unresolved) 
                                                 @endif
                                                 </a>
