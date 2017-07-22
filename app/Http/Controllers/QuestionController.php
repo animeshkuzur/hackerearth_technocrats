@@ -53,7 +53,7 @@ class QuestionController extends Controller
 
     public function get($id){
     	try{
-    		$question_data = Question::where('questions.id',$id)->join('categories','categories.id','=','questions.category_id')->join('users','users.id','=','questions.user_id')->leftJoin('answers','answers.id','=','questions.answer_id')->get(['questions.title','questions.description','categories.name as category_name','users.name as user_question','answers.answer','questions.created as question_created','questions.id as question_id','questions.user_id as question_user_id','questions.user_id as user_id'])->first();
+    		$question_data = Question::where('questions.id',$id)->join('categories','categories.id','=','questions.category_id')->join('users','users.id','=','questions.user_id')->leftJoin('answers','answers.id','=','questions.answer_id')->get(['questions.title','questions.description','categories.name as category_name','users.name as user_question','answers.answer','questions.created as question_created','questions.id as question_id','questions.user_id as question_user_id','questions.user_id as user_id','questions.answer_id as solution'])->first();
     		$tag_data = Tag::where('question_id',$id)->get();
     		$answer_data = Answer::where('question_id',$id)->join('users','users.id','=','answers.user_id')->get(['answer','users.name as user_answer','answers.created as answer_created','answers.user_id as answer_user_id','answers.id as answer_id','users.id as user_id']);
 
@@ -68,18 +68,30 @@ class QuestionController extends Controller
 
     public function delete($id){
     	try{
+            $solution = Question::where('id',$id)->update(['answer_id'=>NULL]);
             $tags = Tag::where('question_id',$id)->delete();
     		$answers = Answer::where('question_id',$id)->delete();
     		$question = Question::where('id',$id)->delete();
     		if($question){
     			return redirect('/home');
     		}
-    		else{
-    			return 'an error occured';
-    		}
+    		return 'an error occured';
     	}
     	catch(Exception $e){
 
     	}
+    }
+
+    public function remove_solution($id){
+        try{
+            $solution = Question::where('id',$id)->update(['answer_id'=>NULL]);
+            if($solution){
+                return redirect('/question/'.$id);
+            }
+            return 'an error occured';
+        }
+        catch(Exception $e){
+
+        }
     }
 }

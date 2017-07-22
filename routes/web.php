@@ -46,6 +46,8 @@ Route::group(['middleware' => ['auth']], function(){
 
 Route::group(['middleware' => ['auth','question.owner']], function(){
 	Route::get('/question/{id}/delete', ['as' => 'delete_question', 'uses' => 'QuestionController@delete']);
+	Route::get('/question/{id}/remove-solution',['as' => 'remove_solution','uses' => 'QuestionController@remove_solution']);
+	Route::get('/question/{id}/answer/{answer_id}/solution',['as' => 'profile','uses' => 'AnswerController@solution']);
 });
 
 Route::group(['middleware' => ['auth','answer.owner']], function(){

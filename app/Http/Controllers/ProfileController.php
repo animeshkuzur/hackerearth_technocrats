@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\UserPreference;
 use App\User;
 use App\Category;
+use App\Question;
+use App\Answer;
 
 class ProfileController extends Controller
 {
@@ -49,7 +51,11 @@ class ProfileController extends Controller
                     array_push($pref,0);
                 }
             }
-    		return view('profile',['pref'=>$pref,'cat'=>$cat,'profile'=>$data,'no_quest'=>sizeof(\DB::table('questions')->where('user_id',$id)->get()),'no_ans'=>sizeof(\DB::table('answers')->where('user_id',$id)->get())]);
+            $no_quest = sizeof(\DB::table('questions')->where('user_id',$id)->get());
+            $no_ans = sizeof(\DB::table('answers')->where('user_id',$id)->get());
+            $quest = Question::where('user_id',$id)->get();
+            $ans = Answer::where('user_id',$id)->get();
+    		return view('profile',['pref'=>$pref,'cat'=>$cat,'profile'=>$data,'no_quest'=>$no_quest,'no_ans'=>$no_ans,'questions'=>$quest,'answers'=>$ans]);
     	}	
     	catch(Exception $e){
 

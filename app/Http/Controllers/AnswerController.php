@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Answer;
 use Carbon\Carbon;
+use App\Question;
 
 class AnswerController extends Controller
 {
@@ -32,6 +33,11 @@ class AnswerController extends Controller
 
     public function delete($id,$answer_id){
     	try{
+            $check = Question::where('id',$id)->get(['answer_id'])->first();
+            if(!empty($check->answer_id)){
+                return redirect('/question/'.$id);
+                //$solution = Question::where('id',$id)->update(['answer_id'=>NULL]);
+            }
     		$answers = Answer::where('question_id',$id)->where('id',$answer_id)->delete();
     		if($answers){
     			return redirect('/question/'.$id);
@@ -41,5 +47,18 @@ class AnswerController extends Controller
     	catch(Exception $e){
 
     	}
+    }
+
+    public function solution($id,$answer_id){
+        try{
+            $quest = Question::where('id',$id)->update(['answer_id'=>$answer_id]);
+            if($quest){
+                return redirect('/question/'.$id);
+            }
+            return 'an error occured';
+        }
+        catch(Exception $e){
+
+        }
     }
 }

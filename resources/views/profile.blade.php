@@ -47,6 +47,50 @@
                                 <p>Total XP : <b>{{ $no_quest*10+$no_ans*5 }}</b></p>
                             </div>
                         </div>
+                        @if(count($questions))
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Questions Asked:</h4>
+                                @foreach($questions as $question)
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h5>
+                                                <a href="{{ url('/question/'.$question->id) }}">{{ $question->title }}.
+                                                @if(empty($question->answer_id)) 
+                                                    (Unresolved) 
+                                                @endif
+                                                </a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
+
+                        @if(count($answers))
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Questions Answered:</h4>
+                                @foreach($answers as $answer)
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h5>
+                                                <a href="{{ url('/question/'.$answer->question_id.'/#answer'.$answer->id) }}">{{ \DB::table('questions')->where('id',$answer->question_id)->get()->first()->title }}.
+                                                @if(empty(\DB::table('questions')->where('id',$answer->question_id)->get()->first()->answer_id)) 
+                                                    (Unresolved) 
+                                                @endif
+                                                </a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
+
                     </div>
                 </div>
             </div>
