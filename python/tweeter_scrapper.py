@@ -6,8 +6,8 @@ import MySQLdb
 import json
 from textblob import TextBlob
 import re
-import matplotlib.pyplot as plt
-import seaborn
+#import matplotlib.pyplot as plt
+#import seaborn
 
 access_token = "887208068609564673-tZ60rekpb1yGe6dahGk1LJ7HnB34YyW"
 access_token_secret = "MXJgNlCBPLPoGNdEZZPwjHEdAYfu25xDMwke293g7Qo0O"
