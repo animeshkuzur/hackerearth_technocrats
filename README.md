@@ -60,9 +60,9 @@ Mysql_database = "<database>";
 Mysql_user = "<mysql_user>";
 Mysql_password = "<mysql_password>";
 ```
-* Create a new `cron job` in Linux
+* Create a new `cron job` in Linux <br/>
 `crontab -e`
-* Add following line into the  `crontab -e `
+* Add following line into the  `crontab -e ` <br/>
 `*/10 * * * * python <address_to_the_parent_folder>/hackerearth_technocrats/python/tweeter_scrapper.py`
 
 
