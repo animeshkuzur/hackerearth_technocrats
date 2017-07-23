@@ -15,8 +15,7 @@ class TagTableSeeder extends Seeder
         $data = array(
         	['question_id' => 1,'tag' => 'PHP'],
         	['question_id' => 1,'tag' => 'Python'],
-        	['question_id' => 2,'tag' => 'Game of Thrones season 7'],
-        	['question_id' => 2,'tag' => 'GoT Season 7']
+        	['question_id' => 2,'tag' => 'Game of Thrones season 7']
         );
         DB::table('tags')->insert($data);
     }

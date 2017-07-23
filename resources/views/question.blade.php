@@ -23,10 +23,48 @@
                         <div class="col-md-12">
                             <h2>{{ $question_data->title }}</h2>
                             <p>{{ $question_data->description }}</p>
-                            <br>
+                            
                             
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Tags:
+                                @foreach($tag_data as $tag)
+                                <span class="label label-default">{{ $tag->tag }}</span>
+                                @endforeach
+                            </h4>
+                            @foreach($tag_data as $tag)
+                                @if(isset($tag->tag_id))
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <h4>{{ $tag->tag }}</h4>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="progress">
+                                              <div class="progress-bar progress-bar-success progress-bar-striped" style="width: {{$tag->positive}}%">
+                                                <span class="sr-only">{{ $tag->positive }}% positive</span>
+                                              </div>
+                                              <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: {{$tag->neutral}}%">
+                                                <span class="sr-only">{{ $tag->neutral }}% neutral</span>
+                                              </div>
+                                              <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: {{$tag->negative}}%">
+                                                <span class="sr-only">{{ $tag->negative }}% negative</span>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                @endif
+                            @endforeach
+                            <div class="row">
+                                <div class="col-md-12" style="text-align:center; color:gray;">
+                                    <p>Sentiment Analysis is being calculated using the Twitter API. If the stats are not being displayed, then it may take some while.</p>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <br>
                     <div class="row">
                         <div class="col-md-6">
                             <p>Asked by <a href="{{ url('/user/'.$question_data->user_id) }}">{{ $question_data->user_question }}</a></p>

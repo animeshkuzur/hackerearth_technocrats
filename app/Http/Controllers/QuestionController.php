@@ -54,7 +54,7 @@ class QuestionController extends Controller
     public function get($id){
     	try{
     		$question_data = Question::where('questions.id',$id)->join('categories','categories.id','=','questions.category_id')->join('users','users.id','=','questions.user_id')->leftJoin('answers','answers.id','=','questions.answer_id')->get(['questions.title','questions.description','categories.name as category_name','users.name as user_question','answers.answer','questions.created as question_created','questions.id as question_id','questions.user_id as question_user_id','questions.user_id as user_id','questions.answer_id as solution'])->first();
-    		$tag_data = Tag::where('question_id',$id)->get();
+    		$tag_data = Tag::where('question_id',$id)->leftJoin('analysed_tags','analysed_tags.tag_id','=','tags.id')->get();
     		$answer_data = Answer::where('question_id',$id)->join('users','users.id','=','answers.user_id')->get(['answer','users.name as user_answer','answers.created as answer_created','answers.user_id as answer_user_id','answers.id as answer_id','users.id as user_id']);
 
     		return view('question',['question_data' => $question_data,'answer_data' => $answer_data,'tag_data' => $tag_data]);
