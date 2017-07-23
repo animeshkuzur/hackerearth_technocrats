@@ -14,11 +14,11 @@
 * `cp ./.env.example ./.env`
 * `php artisan key:generate`
 * Enter the Mysql credentials into `.env ` file
-* create new apps in 
+* create new apps in <br/>
 'facebook' => http://developer.facebook.com/ , 
 'google' => http://console.developer.google.com/ and 
 'twitter' => http://apps.twitter.com/
-* Copy the `client app id` and `client app secret` to `.env` file
+* Copy the `client app id` and `client app secret` to `.env` file <br/>
 `FACEBOOK_ID=<client_id>
 FACEBOOK_SECRET=<client_secret>
 FACEBOOK_REDIRECT=http://<localhost_url>/auth/facebook/callback
