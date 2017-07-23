@@ -1,12 +1,12 @@
 # hackerearth_technocrats
 
-##Project Requirements
+## Project Requirements
 * A webserver (Nginx/Apache)
 * PHP
 * Python
 * MySQL Server
 
-##To deploy Laravel Project (on linux) run the following commands
+## To deploy Laravel Project (on linux) run the following commands
 * 'git clone https://github.com/animeshkuzur/hackerearth_technocrats.git'
 * Install 'composer'
 * `cd hackerearth_technocrats`
@@ -36,18 +36,18 @@ TWITTER_REDIRECT=http://<localhost_url>/auth/twitter/callback`
 * `chown <hostname>:www-data -R ./hackerearth_technocrats`
 * `php artisan migrate --seed`
 
-##To deploy Sentiment Analysis script
-###Python Dependencies
-*tweepy
+## To deploy Sentiment Analysis script
+### Python Dependencies
+* tweepy
 `pip install tweepy`
-*MySQLdb
+* MySQLdb
 `apt-get install python-mysqldb`
 `pip install mysql-python`
-*textblob
+* textblob
 `pip install textblob`
 
-###Instructions
-*Copy and Paste the twitter api tokens and MySQL credentials into `../hackerearth_technocrats/python/tweeter_scrapper.py`
+### Instructions
+* Copy and Paste the twitter api tokens and MySQL credentials into `../hackerearth_technocrats/python/tweeter_scrapper.py`
 `access_token = "<twitter_access_token>"
 access_token_secret = "<twitter_access_token_secret>"
 consumer_key = "<twitter_consumer_key>"
@@ -63,5 +63,5 @@ Mysql_password = "<mysql_password>";`
 
 
 
-#Live Working Demo
+# Live Working Demo
 http://139.59.77.96
