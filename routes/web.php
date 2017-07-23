@@ -42,6 +42,10 @@ Route::group(['middleware' => ['auth']], function(){
 	Route::post('/question/{id}/answer/add', ['as' => 'add_answer', 'uses' => 'AnswerController@add']);
 	Route::post('/question/{id}/answer/{answer_id}/update', ['as' => 'update_answer', 'uses' => 'AnswerController@update']);
 	Route::get('/user/{id}',['as' => 'profile','uses' => 'ProfileController@get']);
+	Route::get('/question/{id}/upvote',['as'=>'question_upvote','uses'=>'UpvoteController@question_upvote']);
+	Route::get('/question/{id}/downvote',['as'=>'question_downvote','uses'=>'UpvoteController@question_downvote']);
+	Route::get('/question/{id}/answer/{answer_id}/upvote',['as'=>'answer_upvote','uses'=>'UpvoteController@answer_upvote']);
+	Route::get('/question/{id}/answer/{answer_id}/downvote',['as'=>'answer_downvote','uses'=>'UpvoteController@answer_downvote']);
 });
 
 Route::group(['middleware' => ['auth','question.owner']], function(){

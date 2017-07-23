@@ -8,6 +8,8 @@ use App\User;
 use App\Category;
 use App\Question;
 use App\Answer;
+use App\QuestionUpvote;
+use App\AnswerUpvote;
 
 class ProfileController extends Controller
 {
@@ -33,6 +35,8 @@ class ProfileController extends Controller
 
     public function get($id){
     	try{
+            $ans_upvote = 0;
+            $quest_upvote = 0;
     		$data = User::where('id',$id)->get()->first();
     		$cat = Category::all();
             $pref = array();
@@ -51,11 +55,18 @@ class ProfileController extends Controller
                     array_push($pref,0);
                 }
             }
-            $no_quest = sizeof(\DB::table('questions')->where('user_id',$id)->get());
-            $no_ans = sizeof(\DB::table('answers')->where('user_id',$id)->get());
+            $no_quest = Question::where('user_id',$id)->count();
+            $no_ans = Answer::where('user_id',$id)->count();
             $quest = Question::where('user_id',$id)->get();
             $ans = Answer::where('user_id',$id)->get();
-    		return view('profile',['pref'=>$pref,'cat'=>$cat,'profile'=>$data,'no_quest'=>$no_quest,'no_ans'=>$no_ans,'questions'=>$quest,'answers'=>$ans]);
+            foreach($ans as $answer){
+                $ans_upvote = $ans_upvote+AnswerUpvote::where('answer_id',$answer->id)->count();
+            }
+            foreach($quest as $question){
+                $quest_upvote = $quest_upvote+QuestionUpvote::where('question_id',$question->id)->count();
+            }
+            
+    		return view('profile',['pref'=>$pref,'cat'=>$cat,'profile'=>$data,'no_quest'=>$no_quest,'no_ans'=>$no_ans,'questions'=>$quest,'answers'=>$ans,'ans_upvote'=>$ans_upvote,'quest_upvote'=>$quest_upvote]);
     	}	
     	catch(Exception $e){
 

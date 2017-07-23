@@ -44,7 +44,8 @@
                                 <p>A member since : {{ $profile->created_at }}</p>
                                 <p>Questions asked : <b>{{ $no_quest }}</b></p>
                                 <p>Question answered : <b>{{ $no_ans }}</b></p>
-                                <p>Total XP : <b>{{ $no_quest*10+$no_ans*5 }}</b></p>
+                                <p>Total Upvotes Received :<b>{{ $quest_upvote+$ans_upvote }}</b></p>
+                                <p>Total XP : <b>{{ ($no_quest*10+$no_ans*5)+($quest_upvote+$ans_upvote) }}</b></p>
                             </div>
                         </div>
                         @if(count($questions))

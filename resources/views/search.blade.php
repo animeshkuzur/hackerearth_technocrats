@@ -34,10 +34,13 @@
                                             @endif</a>
                                         </h4>
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-2">
+                                                    <p style="text-align: left;">{{ sizeof(\DB::table('question_upvotes')->where('question_id',$result->quest_id)->get()) }} Upvote(s)</p>
+                                            </div>
+                                            <div class="col-md-2">
                                                 <p style="text-align: left;">{{ sizeof(\DB::table('answers')->where('question_id',$result->quest_id)->get()) }} Answer(s)</p>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-8">
                                                 <p style="text-align: right;padding-right: 45px;">{{ $result->name }}</p>
                                             </div>
                                         </div>

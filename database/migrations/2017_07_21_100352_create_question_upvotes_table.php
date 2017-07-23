@@ -15,6 +15,11 @@ class CreateQuestionUpvotesTable extends Migration
     {
         Schema::create('question_upvotes', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('question_id')->unsigned();
+            $table->foreign('question_id')->references('id')->on('questions');
+            $table->dateTime('created');
             $table->timestamps();
         });
     }

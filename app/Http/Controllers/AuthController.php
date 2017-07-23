@@ -12,6 +12,7 @@ use App\SocialAccount;
 use App\UserPreference;
 use App\Question;
 use App\Category;
+use App\QuestionUpvote;
 
 class AuthController extends Controller
 {
@@ -39,6 +40,7 @@ class AuthController extends Controller
     public function home(){
         if(Auth::check()){
             $feed = array();
+            $upvote = array();
             $cat = Category::all();
             $pref = array();
             $user_pref = UserPreference::where('user_id',\Auth::user()->id)->join('categories','categories.id','=','user_preferences.category_id')->get(['categories.name as name','categories.id as id']);
@@ -51,6 +53,7 @@ class AuthController extends Controller
                 }
                 if($flag==1){
                     $dat = Question::where('category_id',$categories->id)->join('categories','categories.id','=','questions.category_id')->get(['questions.id as quest_id','categories.name as name','categories.id as id','questions.title as title','questions.answer_id as answer_id'])->first();
+                    //$dat = \DB::select(\DB::raw('select questions.id as quest_id,categories.name as name,categories.id as id,questions.title as title,questions.answer_id as answer_id,count(question_upvotes.user_id) as votes from questions left join categories on categories.id=questions.category_id left join question_upvotes on question_upvotes.question_id = questions.id group by questions.id,categories.name,categories.id,questions.title,questions.answer_id'));
                     array_push($pref,1);
                     if($dat){
                         array_push($feed,$dat);    

@@ -35,6 +35,16 @@
                             <p style="text-align: right;">{{ $question_data->question_created }}</p>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            @if(isset(\DB::table('question_upvotes')->where('question_id',$question_data->question_id)->where('user_id',\Auth::user()->id)->get()->first()->id))
+                            <p><a href="{{ url('/question/'.$question_data->question_id.'/downvote') }}" class="btn btn-primary btn-sm">Downvote</a>
+                            @else
+                            <p><a href="{{ url('/question/'.$question_data->question_id.'/upvote') }}" class="btn btn-primary btn-sm">Upvote</a>
+                            @endif
+                            <b>{{ sizeof(\DB::table('question_upvotes')->where('question_id',$question_data->question_id)->get()) }}</b> Upvote(s)</p>
+                        </div>
+                    </div>
                     @if(\Auth::user()->id == $question_data->question_user_id)
                     <div class="row">
                         <div class="col-md-12">
@@ -60,6 +70,17 @@
                                             </div>
                                             <div class="col-md-6" >
                                                 <p style="text-align: right;">{{ $answer->answer_created }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            
+                                            <div class="col-md-12">
+                                                @if(isset(\DB::table('answer_upvotes')->where('answer_id',$answer->answer_id)->where('user_id',\Auth::user()->id)->get()->first()->id))
+                                                <p><a href="{{ url('/question/'.$question_data->question_id.'/answer/'.$answer->answer_id.'/downvote') }}" class="btn btn-primary btn-sm">Downvote</a>
+                                                @else
+                                                <p><a href="{{ url('/question/'.$question_data->question_id.'/answer/'.$answer->answer_id.'/upvote') }}" class="btn btn-primary btn-sm">Upvote</a>
+                                                @endif
+                                                <b>{{ sizeof(\DB::table('answer_upvotes')->where('answer_id',$answer->answer_id)->get()) }}</b> Upvote(s)</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -120,15 +141,23 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6" style="text-align: left;">
-                                @if(\Auth::user()->id == $question_data->question_user_id)
+                                
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p >
+                                        @if(\Auth::user()->id == $question_data->question_user_id)
                                             <a href="{{ url('/question/'.$question_data->question_id.'/answer/'.$answer->answer_id.'/solution') }}" class="btn btn-success btn-sm">Mark as Solution</a>
+                                        @endif
+                                        @if(isset(\DB::table('answer_upvotes')->where('answer_id',$answer->answer_id)->where('user_id',\Auth::user()->id)->get()->first()->id))
+                                        <a href="{{ url('/question/'.$question_data->question_id.'/answer/'.$answer->answer_id.'/downvote') }}" class="btn btn-primary btn-sm">Downvote</a>
+                                        @else
+                                        <a href="{{ url('/question/'.$question_data->question_id.'/answer/'.$answer->answer_id.'/upvote') }}" class="btn btn-primary btn-sm">Upvote</a>
+                                        @endif
+                                        <b>{{ sizeof(\DB::table('answer_upvotes')->where('answer_id',$answer->answer_id)->get()) }}</b> Upvote(s)
                                         </p> 
                                     </div>
                                 </div>
-                                @endif
+                                
                             </div>
                             <div class="col-md-6" style="text-align: right;">
                                 @if(\Auth::user()->id == $answer->answer_user_id)
