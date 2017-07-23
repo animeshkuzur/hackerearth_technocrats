@@ -49,15 +49,17 @@ TWITTER_REDIRECT=http://<localhost_url>/auth/twitter/callback
 `pip install textblob`
 
 ### Instructions
-* Copy and Paste the twitter api tokens and MySQL credentials into `../hackerearth_technocrats/python/tweeter_scrapper.py`
-`access_token = "<twitter_access_token>"
+* Copy and Paste the twitter api tokens and MySQL credentials into `../hackerearth_technocrats/python/tweeter_scrapper.py` <br/>
+```
+access_token = "<twitter_access_token>"
 access_token_secret = "<twitter_access_token_secret>"
 consumer_key = "<twitter_consumer_key>"
 consumer_secret = "<twitter_consumer_secret>"
 
 Mysql_database = "<database>";
 Mysql_user = "<mysql_user>";
-Mysql_password = "<mysql_password>";`
+Mysql_password = "<mysql_password>";
+```
 * Create a new `cron job` in Linux
 `crontab -e`
 * Add following line into the  `crontab -e `
