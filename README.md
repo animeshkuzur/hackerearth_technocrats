@@ -19,7 +19,8 @@
 'google' => http://console.developer.google.com/ and <br/> 
 'twitter' => http://apps.twitter.com/ 
 * Copy the `client app id` and `client app secret` to `.env` file <br/>
-`FACEBOOK_ID=<client_id>
+```
+FACEBOOK_ID=<client_id>
 FACEBOOK_SECRET=<client_secret>
 FACEBOOK_REDIRECT=http://<localhost_url>/auth/facebook/callback
 
@@ -34,7 +35,8 @@ TWITTER_REDIRECT=http://<localhost_url>/auth/twitter/callback`
 * `chmod 755 -R ./hackerearth_technocrats`
 * `chmod 777 -R ./hackerearth_technocrats/storage`
 * `chown <hostname>:www-data -R ./hackerearth_technocrats`
-* `php artisan migrate --seed`
+* `php artisan migrate --seed
+```
 
 ## To deploy Sentiment Analysis script
 ### Python Dependencies
