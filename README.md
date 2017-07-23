@@ -7,7 +7,7 @@
 * MySQL Server
 
 ## To deploy Laravel Project (on linux) run the following commands
-* 'git clone https://github.com/animeshkuzur/hackerearth_technocrats.git'
+* `git clone https://github.com/animeshkuzur/hackerearth_technocrats.git`
 * Install 'composer'
 * `cd hackerearth_technocrats`
 * `composer install`
