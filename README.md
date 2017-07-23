@@ -15,9 +15,9 @@
 * `php artisan key:generate`
 * Enter the Mysql credentials into `.env ` file
 * create new apps in <br/>
-'facebook' => http://developer.facebook.com/ , 
-'google' => http://console.developer.google.com/ and 
-'twitter' => http://apps.twitter.com/
+'facebook' => http://developer.facebook.com/ , <br/>
+'google' => http://console.developer.google.com/ and <br/> 
+'twitter' => http://apps.twitter.com/ 
 * Copy the `client app id` and `client app secret` to `.env` file <br/>
 `FACEBOOK_ID=<client_id>
 FACEBOOK_SECRET=<client_secret>
