@@ -30,13 +30,13 @@ GOOGLE_REDIRECT=http://<localhost_url>/auth/google/callback
 
 TWITTER_ID=<client_id>
 TWITTER_SECRET=<client_secret>
-TWITTER_REDIRECT=http://<localhost_url>/auth/twitter/callback`
+TWITTER_REDIRECT=http://<localhost_url>/auth/twitter/callback
+```
 * `cd ..`
 * `chmod 755 -R ./hackerearth_technocrats`
 * `chmod 777 -R ./hackerearth_technocrats/storage`
 * `chown <hostname>:www-data -R ./hackerearth_technocrats`
-* `php artisan migrate --seed
-```
+* `php artisan migrate --seed`
 
 ## To deploy Sentiment Analysis script
 ### Python Dependencies
