@@ -123,7 +123,7 @@ def fetch(tag_id):
             tot = tot+1
         #print ("For "+a+": ")
         a = conn.cursor()
-        a.execute("""INSERT INTO analysed_tags (tag_id,positive,negative,neutral) VALUES (%s,%s,%s,%s);""",(tag_id,format(100*pos/tot),format(100*neu/tot),format(100*neg/tot)))
+        a.execute("""INSERT INTO analysed_tags (tag_id,positive,neutral,negative) VALUES (%s,%s,%s,%s);""",(tag_id,format(100*pos/tot),format(100*neu/tot),format(100*neg/tot)))
         conn.commit()
         a.close()
 
