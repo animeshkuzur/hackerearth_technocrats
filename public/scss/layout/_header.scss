@@ -1,0 +1,72 @@
+// ######################################## //
+// ## HEADER.SCSS ## //
+// ######################################## //
+
+.navbar {
+	box-shadow: 0 0 17px rgba($black, 0.1);
+	background-color: $white;
+	
+	// No Box shadow
+	&.no-box-shadow {
+		box-shadow: none;
+		border: 1px solid $gray-e;
+	}
+
+	// Navbar Brand
+	.navbar-brand {
+		font-size: 2em;
+		padding: 20px 15px;
+	}
+	
+	// Navbar Link
+	li .navbar-link {
+		padding: 20px 15px;
+
+		// On Hover or focus
+		&:hover, &:focus {
+			background-color: darken(white, 3%); 	
+		}
+	}
+
+	 // Search Typeahead on navbar
+	 .technocrats-search {
+	 	width: 650px;
+	 	box-shadow: none;
+	    border: 1px solid $gray-d;
+	    border-top: none;
+	    border-bottom: none;
+	    border-radius: 0;
+	 }
+
+	// Dropdown
+	.dropdown {
+
+		// Open Dropdown
+		&.open {
+
+			// Link
+			a:focus, a:hover {
+				background-color: $white;
+			}
+		}
+
+		// Navbar Link
+		.dropdown-toggle {
+			display: flex;
+			align-items: center;
+		}
+
+		// Dropdown Menu
+		.dropdown-menu {
+			border: none;
+			box-shadow: 0px 10px 14px rgba($black, 0.05);
+
+			// Link in dropdown in navbar
+			li a {
+				padding: 8px 20px;
+			}
+		}
+	}
+
+	
+}

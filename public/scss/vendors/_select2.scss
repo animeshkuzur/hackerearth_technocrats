@@ -1,0 +1,88 @@
+
+// ######################################## //
+// ## SELECT-2.SCSS ## //
+// ######################################## //
+
+
+// ## Select2 Container ## //
+.select .select2.select2-container--default {
+	width: 100% !important;
+
+	// Select2 Selection 
+	.select2-selection--single {
+		height: auto;
+		outline: 0;
+		border: 1px solid $gray-a;
+		color: $gray-5;
+		background-color: $white;
+
+
+		// Selected Item
+		.select2-selection__rendered {
+			color: $gray-5;
+			
+			padding: 7px 15px;
+			line-height: inherit;
+		}
+
+		// Select Arrow Wrapper
+		.select2-selection__arrow {
+			height: auto;
+			top: 50%;
+			transform: translateY(-50%);
+
+			// Select Arrow
+			b {
+				border-color: $gray-5 transparent transparent transparent;
+				border-width: 5px 4px 0 4px;
+			}
+		}
+	}
+
+}
+
+
+// Select Container on open
+.select2-container.select2-container--open {
+
+	// Select2 Dropdown
+	.select2-dropdown {
+
+		// Select2 Search in dropdown
+		.select2-search--dropdown{ 
+			padding: 7px 10px;
+
+			// Select2 Search Field
+			.select2-search__field {
+				outline: 0;
+				border-radius: 4px; 
+
+				// On Focus
+				&:focus {
+					border: 1px solid $material-blue;
+				}
+			}
+		}
+
+		// Select2 Results
+		.select2-results {
+
+			// Select2 results Option
+			.select2-results__option {
+				padding: 7px 15px;
+				
+
+				// Highlighted Option
+				&.select2-results__option--highlighted[aria-selected] {
+					color: $white;
+					background-color: $material-blue;
+				}
+
+				&[aria-selected=true] {
+					background-color: $material-blue-bg;
+				}
+			}
+		}
+
+	}
+}

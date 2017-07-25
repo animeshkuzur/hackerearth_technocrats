@@ -1,0 +1,86 @@
+// ######################################## //
+// ## HOME.SCSS ## //
+// ######################################## //
+
+
+// Landing Page Wrapper
+.landing-wrapper {
+}
+
+// Landing Page Banner
+.landing-banner {
+  background-color: $white;
+  height: 100vh;
+  position: relative;
+
+  // Login button Wrapper
+  .login-button {
+    color: $material-blue;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin: 50px 60px;
+    transition: all 0.2s linear;
+
+    // On hover
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    // On Mobile
+    @include mobile {
+      margin: 50px 20px;
+    }
+  }
+
+  // landing Banner inner
+  .landing-banner-inner {
+    position: absolute;
+      top: 45%;
+      left: 50%;
+      width: 60%;
+      max-width: calc((60*1280px)/100);
+      transform: translate(-50%, -50%);
+      
+      // On mobile
+      @include mobile {
+        width: 90%;
+      }
+  }
+
+  // Banner Logo
+  .banner-logo {
+    text-align: center;
+
+    // Image in banner logo
+    img {
+      filter: contrast(0) brightness(200%);
+      width: 300px;
+      
+      // On Mobile
+      @include mobile {
+        width: 230px;
+      }
+    }
+
+    // Logo Text
+    .logo-text {
+      font-size: 5em;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 2px;
+      color: $material-blue;
+    }
+
+    // Logo Subtext
+    // .logo-sub {
+    //   font-size: 15px;
+    //   color: $white;
+    //   text-align: right;
+    //   width: 275px;
+    //   margin: 0 auto;
+    // }
+  }
+
+}
+
+

@@ -1,0 +1,94 @@
+// ######################################## //
+// ## MODAL.SCSS ## //
+// ######################################## //
+
+// ## Modal Content ## //
+.modal-content {
+	border-radius: 4px;
+
+	// Action Btn Group
+	.action-btn-group {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+
+
+// ## Modal Header ## //
+.modal-header {
+
+	// Modal Content
+	.modal-title {
+		font-weight: 300;
+		font-size: 1.8em;
+		text-align: center;
+	}
+
+	// Close
+	.close {
+		font-size: 3em;
+	    font-weight: 300;
+	    opacity: 1;
+	    outline: none;
+	    position: absolute;
+	    top: 0;
+	    right: -45px;
+	    color: $white;
+
+	    @include mobile {
+	    	right: 0;
+	    	top: -50px;
+	    }
+	}
+}
+
+// Login Modal
+#loginModal {
+
+ 	.modal-dialog {
+ 		margin-top: 55px;
+
+		@media (min-width: 500px) {
+			width: 400px;
+		}
+	}
+
+	// MOdal Header
+	.modal-header {
+		border-bottom: none;
+
+		// MOdal Title
+		.modal-title {
+			font-size: 1.5em;
+			text-align: center;
+		}
+
+		// Tabs
+		.nav-tabs {
+			border-bottom: none;
+
+			li {
+				width: 50%;
+
+				a {
+					color: $gray-3;
+				    border: none;
+				    border-bottom: 3px solid transparent;
+
+				    &:hover {
+				    	color: $material-blue;
+				    	background-color: transparent;
+				    }
+				}
+
+				// Active Tab
+				&.active a {
+					border: none;
+				    border-bottom: 3px solid $material-blue;
+				    color: $material-blue;
+				}
+			}
+		}
+	}
+}

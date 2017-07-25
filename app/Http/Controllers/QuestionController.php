@@ -57,7 +57,7 @@ class QuestionController extends Controller
     		$tag_data = Tag::where('question_id',$id)->leftJoin('analysed_tags','analysed_tags.tag_id','=','tags.id')->get();
     		$answer_data = Answer::where('question_id',$id)->join('users','users.id','=','answers.user_id')->get(['answer','users.name as user_answer','answers.created as answer_created','answers.user_id as answer_user_id','answers.id as answer_id','users.id as user_id']);
 
-    		return view('question',['question_data' => $question_data,'answer_data' => $answer_data,'tag_data' => $tag_data]);
+    		return view('pages.question',['question_data' => $question_data,'answer_data' => $answer_data,'tag_data' => $tag_data]);
 
     		
     	}

@@ -1,0 +1,101 @@
+// ######################################## //
+// ## CHART.SCSS ## //
+// ######################################## //
+
+
+// Chart Wrapper
+.chart {
+  padding: 20px;
+  margin-top: 3px;
+}
+
+.chart-inner {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  padding-left: 0;
+  list-style: none;
+  overflow: hidden;
+
+  &:before, &:after {
+    position: absolute;
+  }
+
+  // Outer Circle
+  &:before {
+    content: '';
+    width: inherit;
+    height: inherit;
+    border: 30px solid rgba(211,211,211,.3);
+    border-bottom: none;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+  
+  // Inner Circle
+  &:after {
+    content: attr(data-title);
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 0.875em;
+    font-weight: 400;
+    color: $gray-5;
+  }
+
+  .chart-label {
+    position: absolute;
+    font-size: 0.6em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: $gray-8;
+  }
+
+  li {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 30px solid;
+    border-top: none;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+    &.yes {
+      z-index: 4;
+      border-color: $material-blue;
+      
+      // Chart Label for first element
+      .chart-label {
+        top: 5px;
+        left: 10px;
+      }
+    }
+    
+    &.neutral {
+      z-index: 3;
+      border-color: $material-orange;
+
+      // Chart Label for first element
+      .chart-label {
+        top: 20px;
+        left: 10px;
+      }
+    }
+
+    &.no {
+      z-index: 2;
+      border-color: $material-red;
+
+      // Chart Label for first element
+      .chart-label {
+        top: 18px;
+        left: 10px;
+      }
+    }
+  }
+}

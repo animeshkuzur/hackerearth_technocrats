@@ -1,0 +1,186 @@
+// ######################################## //
+// ## INPUTS.SCSS ## //
+// ######################################## //
+
+
+.input {
+  color: $gray-8;
+  width: 100%;
+  padding: 12px 14px;
+  will-change: border;
+  -webkit-appearance: none;
+  font-size: 1em;
+  @include border-radius(3px !important);
+  border: 1px solid $gray-c;
+  height: auto;
+  outline: none;
+  box-shadow: none;
+
+  // Placeholder of Input
+  @include placeholder {
+    font-size: 1em;
+    font-weight: 300;
+    opacity: 0.5;
+    color: $gray-5;
+  }
+  
+  // Text Area
+  &.textarea {
+    height: auto;
+    resize: none;
+    overflow: auto;
+    padding: 14px;
+  }
+
+  // Read Only Input
+  &.read-only {
+    background-color: $white;
+  }
+}
+
+
+// Outline of inputs
+.input:focus {
+  border-color: $material-blue;
+  box-shadow: none;
+}
+
+// Form Labels
+.form-label {
+  text-transform: uppercase;
+  color: $gray-5;
+  font-size: 0.875em;
+  font-weight: 500;
+}
+
+
+// ## Checkboxes and radio buttons ## //
+
+// Wrapping radio/checkboxes boxes
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: 300;
+  
+  // Input Fields of radio/checkbox
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    // If Checked
+    &:checked ~ .control--indicator {
+      background-color: $material-blue;
+
+      // If input is checked, then displaying small-dot/tick
+      &:after {
+        display: block;
+      }
+    }
+
+    // If Checked and then focus
+    &:checked:focus ~ .control--indicator {
+      background-color: darken($material-blue, 10%);
+    }
+
+    // If input is disabled
+    &:disabled ~ .control--indicator {
+      background-color: $gray-e;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+  }
+
+  // Indicator for Radio/Checkboxes
+  .control--indicator {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: $gray-e;
+    @include transition();
+
+    //  Small dot or tick inside indicator not displayed initially
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      display: none;
+      @include transition();
+    }
+  }
+
+  // On Hover or focus 
+  &:hover,
+  &:focus {
+
+    // Indiactor on hover
+    .control--indicator {
+      background-color: $gray-c;
+    }
+
+    // On hover or focus if input is not disabled, then styling indicators
+    input:not([disabled]):checked ~ .contol-indicator,{
+      background-color: darken($material-blue, 10%);
+    }   
+  }
+
+  // If radio Buttons
+  &.control--radio {
+    
+    // Indicator in radio buttons
+    .control--indicator {
+      border-radius: 50%;
+
+      // Small dot inside radio button
+      &:after {
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: $white;
+      }
+    }
+
+    // Input for radio buttons
+    input {
+
+      // If input is disabled, then styling tick
+      &:disabled ~ .control-indicator:after{
+        background-color: $gray-7;
+      }
+    }
+  }
+
+  // If checkboxes
+  &.control--checkbox {
+
+    // Indiactor in checkbox
+    .control--indicator {
+
+      // Tick inside checkbox
+      &:after {
+        width: 5px;
+        height: 10px;
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    // Input for checkbox
+    input {
+
+      // If input is disabled, then styling tick
+      &:disabled ~ .control-indicator:after{
+        border-color: $gray-7;
+      }
+    }
+  }
+}
