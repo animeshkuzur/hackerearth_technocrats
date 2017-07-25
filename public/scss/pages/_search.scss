@@ -1,0 +1,162 @@
+// ######################################## //
+// ## SEARCH.SCSS ## //
+// ######################################## //
+
+// ## Search Tabs ## //
+.search-tabs {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: $white;
+  box-shadow: 0 0 17px rgba($black, 0.1);
+  text-align: center;
+
+  // Search Tab Item
+  .search-tab-item {
+    display: inline-block;
+    margin: 0 20px;
+
+    // Checkbox
+    input[type="radio"] {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    // Search Tab Label Container
+    .tab-label {
+      padding: 20px 20px;
+      margin-bottom: 0;
+      cursor: pointer;
+      user-select: none;
+      letter-spacing: 1px;
+      font-size: 1em;
+      font-weight: 400;
+      text-transform: uppercase;
+      border-bottom: 3px solid transparent;
+      @include transition();
+
+      // On Hover
+      &:hover {
+        color: $material-blue;
+      }
+    }
+
+    // If input box is checked
+    input[type="radio"]:checked ~ .tab-label {
+      border-bottom: 3px solid $material-blue;
+      color: $material-blue;
+    }
+  }
+}
+
+
+// Category Filter
+.category-filters {
+  box-shadow: 0 0 2px rgba($black, 0.05);
+  padding: 20px 10px;
+  background-color: $white;
+
+  // Category Head
+  .category-head {
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.875em;
+  }
+}
+
+// ## Questions Box ## //
+.questions-box {
+  box-shadow: 0 0 2px rgba($black, 0.05);
+}
+
+// ## Question ## //
+// Question Wrapper
+.question-wrapper {
+  padding: 20px;
+  background-color: $white;
+  border-bottom: 2px solid darken($white, 2%);
+
+  // Question Content
+  .question-content {
+    border-right: 1px solid $gray-e;
+    padding-right: 15px;
+
+    // Question
+    .question {
+      font-size: 1.2em;
+      font-weight: 400;
+      color: $gray-5;
+    }
+
+    // Answer
+    .question-description {
+      color: $gray-8;
+      margin-top: 15px;
+    }
+
+    // Action Button Group
+    .action-btn-group {
+      font-size: 0.875em;
+      display: flex;
+      align-items: center;
+
+      // Link
+      a {
+        text-decoration: none;
+      }
+
+      // Action Button
+      .action-btn {
+        color: $gray-d;
+        margin-right: 20px;
+        text-decoration: none;
+
+        // Number of answers
+        &.number-answers {
+          color: $material-pink;
+        }
+
+        // Number of votes
+        &.votes {
+          color: $material-purple;
+        }
+
+        // Null Class
+        &.null {
+          color: $gray-d;
+        }
+
+      }
+
+      // Actions
+      .actions {
+        flex: 1;
+      }
+
+      // Time
+      .time {
+        color: $material-teal;
+        margin-right: 0;
+      }
+    }
+  }
+
+  // Question Category
+  .question-category {
+    text-align: center;
+    color: darken($material-blue, 3%);
+
+    // Icon
+    .icon {
+      font-size: 3em;
+    }
+
+    // Label
+    .category-label {
+      font-size: 0.875em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+  }
+}

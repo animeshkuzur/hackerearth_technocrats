@@ -1,0 +1,105 @@
+// ######################################## //
+// ## TYPEAHEAD.SCSS ## //
+// ######################################## //
+
+// Search Wrapper
+.technocrats-search {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 30px rgba($black, 0.08);
+  border-radius: 4px;
+  @include transition();
+
+  .typeahead {
+    border: none;
+    color: $gray-6;
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 21px;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    height: auto;
+
+    @include placeholder {
+      color: $gray-9;
+    }
+  }
+
+  // On Hover or focus
+  &:hover, &:focus {
+  box-shadow: 0px 0px 40px rgba($black, 0.1);
+  }
+}
+
+.twitter-typeahead {
+  display: block !important;
+  color: $gray-6;
+
+  // .typeahead {
+  //   border: none;
+  //   color: $gray-6;
+  //   width: 100%;
+  //   padding: 14px 16px;
+  //   font-size: 21px;
+  //   outline: none;
+  //   border-radius: 4px 0 0 4px;
+  //   height: auto;
+
+  //   @include placeholder {
+  //     color: $gray-9;
+  //   }
+  // }
+
+  .tt-menu {
+    top: calc(100% + 2px) !important;
+    background-color: $white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    margin-top: 0;
+    padding: 8px 0;
+    width: calc(100% + 65px);
+    text-align: left;
+    max-height: 250px;
+    overflow-y: auto;
+    color: #333;
+
+    .tt-suggestion {
+      font-size: 1.2em;
+      padding: 14px 16px;
+      border-left: 4px solid transparent;
+
+      // On hover
+      &:hover {
+        background-color: rgba($material-blue, 0.05);
+        border-left: 4px solid $material-blue;
+        cursor: pointer;
+        color: $gray-5;
+      }
+
+      &.tt-cursor {
+        text-decoration: none;
+        outline: 0;
+        background-color: #ffff66;
+        color: #111;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .tt-highlight {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Search Button of typeahead
+.technocrats-search .search-button {
+  background-color: $white;
+  border-color: $white;
+  color: $material-blue;
+  font-size: 30px;
+  padding: 7px 20px;
+}

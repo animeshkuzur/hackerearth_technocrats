@@ -18,31 +18,31 @@ class AuthController extends Controller
 {
     public function auth(){
         if(Auth::check()){
-            return redirect('home');    
+            return redirect('/');    
         }
-    	return view('auth.login');
+    	return redirect('/');
     }
 
     public function register(){
         if(Auth::check()){
-            return redirect('home');    
+            return redirect('/');    
         }
-    	return view('auth.register');
+    	return redirect('/');
     }
 
     public function logout(){
         if(Auth::check()){
             Auth::logout();    
         }
-        return redirect()->route('login');
+        return redirect('/');
     }
 
     public function home(){
+        $feed = array();
+        $upvote = array();
+        $cat = Category::all();
+        $pref = array();
         if(Auth::check()){
-            $feed = array();
-            $upvote = array();
-            $cat = Category::all();
-            $pref = array();
             $user_pref = UserPreference::where('user_id',\Auth::user()->id)->join('categories','categories.id','=','user_preferences.category_id')->get(['categories.name as name','categories.id as id']);
             foreach($cat as $categories){
                 $flag=0;
@@ -52,7 +52,7 @@ class AuthController extends Controller
                     }
                 }
                 if($flag==1){
-                    $dat = Question::where('category_id',$categories->id)->join('categories','categories.id','=','questions.category_id')->get(['questions.id as quest_id','categories.name as name','categories.id as id','questions.title as title','questions.answer_id as answer_id'])->first();
+                    $dat = Question::where('category_id',$categories->id)->join('categories','categories.id','=','questions.category_id')->get(['questions.id as quest_id','categories.name as name','categories.id as id','questions.title as title','questions.answer_id as answer_id','questions.description as description','questions.created as time'])->first();
                     //$dat = \DB::select(\DB::raw('select questions.id as quest_id,categories.name as name,categories.id as id,questions.title as title,questions.answer_id as answer_id,count(question_upvotes.user_id) as votes from questions left join categories on categories.id=questions.category_id left join question_upvotes on question_upvotes.question_id = questions.id group by questions.id,categories.name,categories.id,questions.title,questions.answer_id'));
                     array_push($pref,1);
                     if($dat){
@@ -63,9 +63,31 @@ class AuthController extends Controller
                     array_push($pref,0);
                 }
             }
-            return view('home',['pref'=>$pref,'feeds'=>$feed,'cat'=>$cat]);    
+            return view('pages.dashboard',['pref'=>$pref,'feeds'=>$feed,'cat'=>$cat]);    
         }
-        return redirect()->route('login');
+        else{
+            $user_pref = Category::all();
+            foreach($cat as $categories){
+                $flag=0;
+                for($i=0;$i<sizeof($user_pref);$i++){
+                    if($categories->id == $user_pref[$i]->id){
+                        $flag = 1;
+                    }
+                }
+                if($flag==1){
+                    $dat = Question::where('category_id',$categories->id)->join('categories','categories.id','=','questions.category_id')->get(['questions.id as quest_id','categories.name as name','categories.id as id','questions.title as title','questions.answer_id as answer_id','questions.description as description','questions.created as time'])->first();
+                    //$dat = \DB::select(\DB::raw('select questions.id as quest_id,categories.name as name,categories.id as id,questions.title as title,questions.answer_id as answer_id,count(question_upvotes.user_id) as votes from questions left join categories on categories.id=questions.category_id left join question_upvotes on question_upvotes.question_id = questions.id group by questions.id,categories.name,categories.id,questions.title,questions.answer_id'));
+                    array_push($pref,1);
+                    if($dat){
+                        array_push($feed,$dat);    
+                    }
+                }
+                else{
+                    array_push($pref,0);
+                }
+            }
+            return view('pages.dashboard',['pref'=>$pref,'feeds'=>$feed,'cat'=>$cat]);
+        }
     }
 
     public function email(Request $request){

@@ -17,8 +17,7 @@
                                     <li><input type="checkbox" name="category[]" value="{{$category->id}}" checked> <label for="category[]">{{$category->name}}</label></li>
                                 @else
                                     <li><input type="checkbox" name="category[]" value="{{$category->id}}"> <label for="category[]">{{$category->name}}</label></li>
-                                @endif
-                                                                
+                                @endif                                    
                             @endforeach
                            
                           </ul>

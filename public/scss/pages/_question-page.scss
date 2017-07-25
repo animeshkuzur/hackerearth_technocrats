@@ -1,0 +1,177 @@
+// ######################################## //
+// ## QUESTIONPAGE.SCSS ## //
+// ######################################## //
+
+
+
+// ## Questions Box ## //
+.question-page-box {
+  
+  // Question Wrapper
+  .question-wrapper {
+    border-bottom: none;
+
+    // Question Content
+    .question-content {
+      border-right: none;
+
+      // Question Title
+      .question {
+        font-size: 2em;
+        line-height: 1.2;
+      }
+
+      // Tags
+      .question-tags {
+        margin-top: 10px;
+
+        // Single Tag
+        .btn-primary {
+          color: $material-orange;
+          border: 1px solid  $material-orange;
+          background-color: rgba($material-orange, 0.1);
+          padding: 5px 15px;
+          margin-right: 10px;
+          border-radius: 5px;
+          font-weight: 300;
+          text-transform: none;
+        }
+      }
+
+      // Upvote Button
+      .action-btn-group .btn-outline {
+        border: none;
+      }
+    }
+  }
+}
+
+// ## Answers Box ## //
+.answers-box {
+  padding: 20px 15px;
+
+  // Answer Form
+  .answer-form {
+    border-bottom: 1px solid $gray-e;
+  }
+}
+
+// ## Answer Content ## //
+.answer-content {
+  padding: 20px 0;
+  border-bottom: 1px solid $gray-e;
+
+  // Remove padding and border on last child
+  &:last-child {
+    padding: 20px 0 0;
+    border: none;
+  }
+
+  // Answer User
+  .answer-user {
+
+    // Name
+    .name {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1em;
+    }
+
+    // Time
+    .time {
+      font-size: 0.75em;
+      color: $gray-a;
+    }
+  }
+
+  // Answer
+  .answer-text {
+    color: $gray-8;
+    margin-top: 15px;
+  }
+
+  // Action Button Group
+  .action-btn-group {
+    font-size: 0.875em;
+    display: flex;
+    align-items: center;
+
+    // Link
+    a {
+      text-decoration: none;
+    }
+
+    // Action Button
+    .action-btn {
+      color: $gray-d;
+      margin-right: 20px;
+      text-decoration: none;
+
+      // Number of votes
+      &.votes {
+        color: $material-pink;
+      }
+
+      // Null Class
+      &.null {
+        color: $gray-d;
+      }
+
+    }
+
+    // Actions
+    .actions {
+      flex: 1;
+    }
+
+    // Correct Solution
+    .correct-soln {
+
+      // Mark as desired soln
+      .btn-primary {
+        color: $material-teal;
+
+        &:hover, &:focus, &.marked {
+          background-color: rgba($material-teal, 0.1);
+        }
+      }
+    }
+
+    // Upvote Button
+    .btn-outline {
+      border: none;
+    }
+  }
+}
+
+// ## Author Box ## //
+.author-box {
+  border-bottom: 5px solid $material-blue;
+  color: $gray-5;
+  cursor: pointer;
+  padding: 20px;
+
+  // On Hover or focus
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  // Icon
+  i {
+    font-size: 4em;
+  }
+
+  // Author Name
+  .author-name {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+}
+
+// ## Sentiment Analysis Title ## //
+// Sentiment Analysis Title
+.sentiment-title {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 400;
+}

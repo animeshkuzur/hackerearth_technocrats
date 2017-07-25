@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
 Route::get('/auth',['as' => 'login','uses' => 'AuthController@auth']);
@@ -30,18 +30,22 @@ Route::get('/auth/password/email',['as' => 'password_email','uses' => 'AuthContr
 Route::post('/auth/password/email',['as' => 'password_request','uses' => 'AuthController@password_request']);
 Route::get('/auth/password/reset',['as' => 'password_reset','uses' => 'AuthController@password_reset']);
 
+Route::get('/home', ['as' => 'home', 'uses' => 'AuthController@home']);
+Route::get('/search', ['as' => 'search', 'uses' => 'SearchController@search']);
+Route::post('/profile/preference',['as' => 'preference','uses' => 'ProfileController@preference']);
+Route::get('/question/{id}', ['as' => 'get_question', 'uses' => 'QuestionController@get']);
+Route::get('/user/{id}',['as' => 'profile','uses' => 'ProfileController@get']);
+
 Route::group(['middleware' => ['auth']], function(){
-	Route::get('/home', ['as' => 'home', 'uses' => 'AuthController@home']);
-	Route::get('/search', ['as' => 'search', 'uses' => 'SearchController@search']);
-	Route::post('/profile/preference',['as' => 'preference','uses' => 'ProfileController@preference']);
+	
+	
 	Route::get('/question/add', ['as' => 'getadd_question', 'uses' => 'QuestionController@getadd']);
 	Route::post('/question/add', ['as' => 'add_question', 'uses' => 'QuestionController@add']);
 	Route::post('/question/{id}/update', ['as' => 'update_question', 'uses' => 'QuestionController@update']);
 	
-	Route::get('/question/{id}', ['as' => 'get_question', 'uses' => 'QuestionController@get']);
+	
 	Route::post('/question/{id}/answer/add', ['as' => 'add_answer', 'uses' => 'AnswerController@add']);
 	Route::post('/question/{id}/answer/{answer_id}/update', ['as' => 'update_answer', 'uses' => 'AnswerController@update']);
-	Route::get('/user/{id}',['as' => 'profile','uses' => 'ProfileController@get']);
 	Route::get('/question/{id}/upvote',['as'=>'question_upvote','uses'=>'UpvoteController@question_upvote']);
 	Route::get('/question/{id}/downvote',['as'=>'question_downvote','uses'=>'UpvoteController@question_downvote']);
 	Route::get('/question/{id}/answer/{answer_id}/upvote',['as'=>'answer_upvote','uses'=>'UpvoteController@answer_upvote']);
