@@ -172,8 +172,8 @@
 
 
                       @if(\Auth::check())
-                        @if(\Auth::user()->id == $question_data->question_user_id)
-                          <a href="{{ url('/question/'.$question_data->question_id.'/delete') }}" class="btn btn-danger btn-sm">Delete</a>
+                        @if(\Auth::user()->id == $answer->answer_user_id)
+                          <a href="{{ url('/question/'.$question_data->question_id.'answer/'.$answer->answer_id.'/delete') }}" class="btn btn-danger btn-sm">Delete</a>
                         @endif
                       @endif
 
@@ -183,6 +183,10 @@
                       <span class="correct-soln"> 
                         <a href="{{ url('/question/'.$question_data->question_id.'/remove-solution') }}" class="btn-primary btn-outline marked"><i class="ion-checkmark-circled paddingright-xs"></i>Unmark Solution</a>
                       </span>
+                      @else
+                        <span class="correct-soln"> 
+                          <a href="#" class="btn-primary btn-outline marked"><i class="ion-checkmark-circled paddingright-xs"></i>Correct Solution</a>
+                        </span>
                       @endif
 
                     @else
