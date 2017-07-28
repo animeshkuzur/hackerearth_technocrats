@@ -153,7 +153,7 @@
 
                   <div class="col-md-10"> 
                     <div class="question-content">
-                      <a href="{{ url('/question/'.$question->id) }}"><div class="question">{{ $answer->title }}
+                      <a href="{{ url('/question/'.$answer->id) }}"><div class="question">{{ $answer->title }}
                       @if(empty($answer->answer_id)) 
                         (Unresolved) 
                       @endif</div></a>
