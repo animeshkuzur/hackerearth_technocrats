@@ -4333,3 +4333,6 @@
 127.0.0.1 - - [25/Jul/2017:18:59:07 +0530] "GET / HTTP/1.1" 200 11621 "http://hackerearth.dev/" "Mozilla/5.0 (X11; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0"
 127.0.0.1 - - [25/Jul/2017:18:59:15 +0530] "GET /question/1 HTTP/1.1" 200 19462 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0"
 127.0.0.1 - - [25/Jul/2017:18:59:15 +0530] "GET /question/1 HTTP/1.1" 200 19462 "http://hackerearth.dev/question/1" "Mozilla/5.0 (X11; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0"
+127.0.0.1 - - [26/Jul/2017:09:58:26 +0530] "GET / HTTP/1.1" 200 11621 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0"
+127.0.0.1 - - [26/Jul/2017:09:58:26 +0530] "GET / HTTP/1.1" 200 11621 "http://hackerearth.dev/" "Mozilla/5.0 (X11; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0"
+127.0.0.1 - - [26/Jul/2017:09:58:26 +0530] "GET /fonts/ionicons.ttf?v=2.0.0 HTTP/1.1" 200 188508 "http://hackerearth.dev/css/vendor/ionicons.css" "Mozilla/5.0 (X11; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0"
