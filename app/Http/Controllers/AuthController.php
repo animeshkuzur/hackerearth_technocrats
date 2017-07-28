@@ -55,7 +55,7 @@ class AuthController extends Controller
                     $data = Question::where('category_id',$categories->id)->join('categories','categories.id','=','questions.category_id')->get(['questions.id as quest_id','categories.name as name','categories.id as id','questions.title as title','questions.answer_id as answer_id','questions.description as description','questions.created as time']);
                     //$dat = \DB::select(\DB::raw('select questions.id as quest_id,categories.name as name,categories.id as id,questions.title as title,questions.answer_id as answer_id,count(question_upvotes.user_id) as votes from questions left join categories on categories.id=questions.category_id left join question_upvotes on question_upvotes.question_id = questions.id group by questions.id,categories.name,categories.id,questions.title,questions.answer_id'));
                     array_push($pref,1);
-                    if($dat){
+                    if($data){
                         foreach($data as $dat){
                             array_push($feed,$dat);                            
                         }    
