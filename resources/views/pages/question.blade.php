@@ -222,6 +222,14 @@
                       @else
                         <a href="{{ url('/question/'.$question_data->question_id.'/answer/'.$answer->answer_id.'/upvote') }}" class="btn-primary btn-outline"><i class="ion-thumbsup paddingright-xs"></i>Upvote</a>
                       @endif
+
+                      
+                      @if(\Auth::check())
+                        @if(\Auth::user()->id == $answer->answer_user_id)
+                          <a href="{{ url('/question/'.$question_data->question_id.'answer/'.$answer->answer_id.'/delete') }}" class="btn btn-danger btn-sm">Delete</a>
+                        @endif
+                      @endif
+                      
                     </div>
                     @if(\Auth::check())
                     @if(\Auth::user()->id == $question_data->question_user_id)
