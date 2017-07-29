@@ -48,7 +48,7 @@ class ProfileController extends Controller
             $no_quest = Question::where('user_id',$id)->count();
             $no_ans = Answer::where('user_id',$id)->count();
             $quest = Question::where('user_id',$id)->leftJoin('categories','categories.id','=','questions.category_id')->get(['questions.id','questions.description','questions.title','questions.answer_id','questions.created','categories.name']);
-            $ans = Answer::where('answers.user_id',$id)->leftJoin('questions','questions.id','=','answers.question_id')->leftJoin('categories','categories.id','=','questions.category_id')->get(['questions.title','questions.answer_id','questions.description','questions.created','categories.name','questions.id']);
+            $ans = Answer::where('answers.user_id',$id)->leftJoin('questions','questions.id','=','answers.question_id')->leftJoin('categories','categories.id','=','questions.category_id')->get(['questions.title','questions.answer_id','questions.description','questions.created','categories.name','questions.id','answers.question_id']);
             foreach($ans as $answer){
                 $ans_upvote = $ans_upvote+AnswerUpvote::where('answer_id',$answer->id)->count();
             }
